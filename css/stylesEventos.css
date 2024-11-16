@@ -1,0 +1,19 @@
+.table-responsive {
+  height: 300px;
+  /* Ajusta la altura según tus necesidades */
+  overflow-y: auto;
+  /* Activa el scroll vertical */
+}
+
+.table-responsive-triatlon {
+  height: 250px;
+  
+  overflow-y: auto;
+}
+
+.fs-sm {
+  font-size: 8.5px;
+}
+#horaInicio{
+  width: 130px;
+}

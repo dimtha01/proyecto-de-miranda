@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/stylesEventos.css">
+</head>
+
+<body class="bg-dark" data-bs-theme="dark">
+  <div class="container mt-4 border">
+    <div class="card my-2 mx-auto">
+      <form class="p-2" id="formRegistro">
+        <div class="row mb-3">
+          <div class="col">
+            <label for="taxt" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" aria-describedby="nameHelp" required>
+            <div id="nameHelp" class="form-text">Por favor Ingrese su Nombre</div>
+          </div>
+          <div class="col">
+            <label for="text" class="form-label">Cedula</label>
+            <input type="number" class="form-control" id="cedula" aria-describedby="cedulaHelp" required>
+            <div id="cedulaHelp" class="form-text">Por Favor Ingrese Su Cedula</div>
+          </div>
+          <div class="col">
+            <label for="municipio" class="mb-2">Municipio</label>
+            <select class="form-control" id="municipio" aria-describedby="municipioHelp" required>
+              <option value="">Seleccione un municipio</option>
+              <option value="Valencia">Valencia</option>
+              <option value="Naguanagua">Naguanagua</option>
+              <option value="San Diego">San Diego</option>
+              <option value="Carlos Arvelo">Carlos Arvelo</option>
+              <option value="Guacara">Guacara</option>
+              <option value="Puerto Cabello">Puerto Cabello</option>
+              <option value="Los Guayos">Los Guayos</option>
+              <option value="Miranda">Miranda</option>
+              <option value="Bejuma">Bejuma</option>
+              <option value="Montalbán">Montalbán</option>
+              <option value="Juan José Mora">Juan José Mora</option>
+              <option value="Tocuyito">Tocuyito</option>
+              <option value="Las Chaguaramas">Las Chaguaramas</option>
+            </select>
+            <div id="municipio" class="form-text">Seleccione su Municipio de Carabobo</div>
+          </div>
+          <div class="col">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="edad" aria-describedby="emailHelp3">
+            <div id="edadHelp" class="form-text">Ingrese Su Edad Por favor.</div>
+          </div>
+
+
+        </div>
+        <button type="submit" class="btn btn-outline-success" id="inscribirse">Inscribirse</button>
+      </form>
+    </div>
+
+   <!--  <div class="d-flex align-items-center my-2">
+      <input type="time" class="form-control me-2" id="horaInicio">
+      <button class="btn btn-outline-info" onclick="validarFormulario()">Agregar Hora de Inicio</button>
+    </div> -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Ver Participantes
+    </button>
+    <div class="card pt-2">
+      <div class="table-responsive-triatlon">
+
+        <table class="table fs-sm " id="tablaDeTriatlon">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Cédula</th>
+              <th scope="col">Municipio</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Hora de Inicio Caminata</th>
+              <th scope="col">Hora de Fin Caminata</th>
+              <th scope="col">Tiempo Caminata</th>
+              <th scope="col">Hora de Inicio Natación</th>
+              <th scope="col">Hora de Fin Natación</th>
+              <th scope="col">Tiempo Natación</th>
+              <th scope="col">Hora de Inicio Ciclismo</th>
+              <th scope="col">Hora de Fin Ciclismo</th>
+              <th scope="col">Tiempo Ciclismo</th>
+              <th scope="col">Tiempo Total</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <button class="btn btn-outline-info my-2" onclick="simulacionDeTriatlon()">Iniciar Evento</button>
+
+  </div>
+  <!-- Modal -->
+
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table" id="participatenAsistido">
+              <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Cédula</th>
+                  <th scope="col">Municipio</th>
+                  <th scope="col">Edad</th>
+                  <th scope="col">Confimar Asistencia</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="confimarParticipante">Confirmar Participantes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/prueba.js"></script>
+</body>
+
+</html>
